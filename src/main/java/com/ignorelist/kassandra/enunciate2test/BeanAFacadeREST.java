@@ -13,7 +13,7 @@ import javax.ws.rs.Path;
  * @author poison
  */
 @Stateless
-@Path("/")
+@Path("/beanA")
 public class BeanAFacadeREST extends AbstractFacadeREST<Integer, BeanA> {
 
 }
