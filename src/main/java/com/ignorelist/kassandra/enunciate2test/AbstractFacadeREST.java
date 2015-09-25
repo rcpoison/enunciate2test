@@ -24,12 +24,23 @@ import javax.ws.rs.core.MediaType;
  */
 public abstract class AbstractFacadeREST<K, T extends EntityInterface<K>> {
 
+	/**
+	 * find all entities
+	 *
+	 * @return
+	 */
 	@GET
 	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
 	public List<T> findAll() {
 		throw new UnsupportedOperationException("example");
 	}
-	
+
+	/**
+	 * find entity by its unique id
+	 *
+	 * @param id unique id
+	 * @return the entity
+	 */
 	@GET
 	@Path("{id}")
 	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -37,6 +48,12 @@ public abstract class AbstractFacadeREST<K, T extends EntityInterface<K>> {
 		throw new UnsupportedOperationException("example");
 	}
 
+	/**
+	 * persist entity
+	 *
+	 * @param entity the entity to persist
+	 * @return the persisted entity
+	 */
 	@POST
 	@Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
 	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -44,6 +61,12 @@ public abstract class AbstractFacadeREST<K, T extends EntityInterface<K>> {
 		throw new UnsupportedOperationException("example");
 	}
 
+	/**
+	 * edit entity
+	 *
+	 * @param entity the entity to edit
+	 * @return the edited entity
+	 */
 	@PUT
 	@Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
 	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -51,6 +74,12 @@ public abstract class AbstractFacadeREST<K, T extends EntityInterface<K>> {
 		throw new UnsupportedOperationException("example");
 	}
 
+	/**
+	 * delete entity by its unique id
+	 *
+	 * @param id the unique id
+	 * @return the deleted entity
+	 */
 	@DELETE
 	@Path("{id}")
 	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
