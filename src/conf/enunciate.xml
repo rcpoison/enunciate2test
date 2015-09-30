@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<enunciate label="test" includeReferenceTrailInErrors="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://raw.githubusercontent.com/stoicflame/enunciate/v2/top/src/main/resources/META-INF/enunciate-2.0.0-RC.1.xsd">
+	<modules>
+		<!-- Docs -->
+		<docs />
+		<jackson honorJaxb="true" />
+		<java-json-client disabled="true" />
+		<java-xml-client disabled="true" />
+		<c-xml-client disabled="true" />
+		<gwt-json-overlay disabled="true" />
+		<php-xml-client disabled="true" />
+		<php-json-client disabled="true" />
+		<ruby-json-client  disabled="true" /> 
+		<obj-c-xml-client disabled="true" />
+		<csharp-xml-client disabled="true" />
+		<swagger docsSubdir="swagger" basePath="http://localhost:8080/ISAS" />
+	</modules>
+   
+</enunciate>
