@@ -36,6 +36,7 @@ public class ApplicationConfig extends Application {
 	 * If required, comment out calling this method in getClasses().
 	 */
 	private void addRestResourceClasses(Set<Class<?>> resources) {
+		resources.add(com.ignorelist.kassandra.enunciate2test.BeanAFacadeREST.class);
 		resources.add(com.ignorelist.kassandra.enunciate2test.FacadeREST.class);
 	}
 	

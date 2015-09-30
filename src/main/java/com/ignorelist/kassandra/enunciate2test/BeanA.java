@@ -36,5 +36,10 @@ public class BeanA implements EntityInterface<Integer> {
 	public void setB(BeanB b) {
 		this.b = b;
 	}
+	
+	@XmlJavaTypeAdapter(EntityClassAdapter.class)
+	public Class<?> entityClass() {
+		return BeanA.class;
+	}
 
 }
