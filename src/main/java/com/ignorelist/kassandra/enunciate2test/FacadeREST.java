@@ -10,6 +10,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  *
@@ -27,11 +28,19 @@ public class FacadeREST {
 		a.setB(getB());
 		return a;
 	}
-	
+
 	@Path("b")
 	@GET
 	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
 	public BeanB getB() {
 		return new BeanB(1);
+	}
+	
+	@Path("entities")
+	@GET
+	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+	@XmlJavaTypeAdapter(EntityClassAdapter.class)
+	public Class<?> entityA() {
+		return BeanA.class;
 	}
 }
